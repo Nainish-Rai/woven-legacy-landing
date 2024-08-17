@@ -1,9 +1,11 @@
 import { Main, Section, Container } from "@/components/craft";
 import Balancer from "react-wrap-balancer";
+import HeroSection from "./(homepage)/HeroSection";
 
 export default function Home() {
   return (
     <Main>
+      <HeroSection />
       <Section>
         <Container>
           <ExampleJsx />
@@ -18,39 +20,23 @@ const ExampleJsx = () => {
     <article className="prose-m-none">
       <h1>
         <Balancer>
-          Hello World, welcome to the Next.js and{" "}
-          <a href="https://github.com/brijr/craft">brijr/craft</a> Starter!
+          Hello <span className="alternate-font"> World</span>, welcome to the{" "}
+          <span className="alternate-font">Woven Legacy</span>
         </Balancer>
       </h1>
-      <a className="h-16 block" href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fbrijr%2Fcraft-starter">
-        {/* eslint-disable-next-line */}
-        <img
-          className="not-prose my-4"
-          src="https://vercel.com/button"
-          alt="Deploy with Vercel"
-        />
-      </a>
       <p>
-        Welcome to the{" "}
-        <a href="https://github.com/brijr/craft-starter">Craft Starter</a> by{" "}
-        <a href="https://bridger.to">Bridger Tower</a>. This Next JS template
-        has been set up based on the recommended{" "}
-        <a
-          className="underline"
-          href="https://ui.shadcn.com/docs/installation/next"
-        >
-          Shadcn/ui Next.js setup
-        </a>
-        . Use this template paired with{" "}
-        <a href="https://components.bridger.to">brijr/components</a> for rapid
-        building.
+        Welcome to Woven Legacy, where tradition meets artistry in the world of
+        handcrafted rugs and carpets. Our showroom is dedicated to showcasing
+        exquisite pieces that reflect the rich heritage of carpet weaving while
+        embracing modern design sensibilities.
       </p>
       <hr />
       <h2>Example Heading</h2>
       <p>
-        This is an example paragraph to illustrate what an article section might
-        look like in this context. You can add more content here to expand on
-        the topic and provide more detailed information to your readers.
+        Welcome to Woven Legacy, where tradition meets artistry in the world of
+        handcrafted rugs and carpets. Our showroom is dedicated to showcasing
+        exquisite pieces that reflect the rich heritage of carpet weaving while
+        embracing modern design sensibilities.
       </p>
       <ul>
         <li>List Item 1</li>

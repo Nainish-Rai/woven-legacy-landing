@@ -39,8 +39,7 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="light"
           disableTransitionOnChange
         >
           <Nav />
@@ -59,30 +58,24 @@ const Nav = ({ className, children, id }: NavProps) => {
     >
       <div
         id="nav-container"
-        className="max-w-5xl mx-auto py-4 px-6 sm:px-8 flex justify-between items-center"
+        className="max-w-screen-2xl mx-auto py-4 px-6 sm:px-8 flex justify-between items-center"
       >
         <Link
           className="hover:opacity-75 transition-all flex gap-2 items-center"
           href="/"
         >
-          <h2 className="sr-only">Craft UI</h2>
-          <Image
-            src={Logo}
-            alt="Logo"
-            className="invert dark:invert-0"
-            width={84}
-            height={30.54}
-          ></Image>
+          <h2 className="alternate-font text-xl font-bold">Woven Legacy</h2>
         </Link>
         {children}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center -ml-4 gap-2">
           <NavMenu />
-          <ThemeToggle />
-          <Button asChild className="hidden sm:flex">
-            <Link href="https://9d8.dev">Get Started</Link>
-          </Button>
+          {/* <ThemeToggle /> */}
+
           <MobileNav />
         </div>
+        <Button asChild className="hidden  sm:flex">
+          <Link href="https://9d8.dev">Contact Us</Link>
+        </Button>
       </div>
     </nav>
   );

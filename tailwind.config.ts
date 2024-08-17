@@ -23,6 +23,11 @@ const config = {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
       colors: {
+        serpentine: "#283106",
+        ivy: "#777E5C",
+        khaki: "#C7C2AB",
+        spring: "#D1D8BD",
+        frost: "#DFEODC",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
