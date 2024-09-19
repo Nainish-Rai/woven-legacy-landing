@@ -10,6 +10,7 @@ import NumbersSection from "./(homepage)/NumbersSection";
 import Footer from "@/components/footer";
 import ZoomParallax from "@/components/zoom-parallax";
 import Testimonials from "./(homepage)/Testimonial";
+import { AboutFamily } from "./(homepage)/FamilyAbout";
 
 export default function Home() {
   return (
@@ -25,7 +26,7 @@ export default function Home() {
       <Section className="flex bg-stone-100 justify-center">
         <NewAndFeatured />
       </Section>
-      <Section className="flex  justify-center">
+      <Section className="flex   justify-center">
         <FeaturedCollection />
       </Section>
       <Section className="flex bg-stone-100  justify-center">
@@ -35,6 +36,9 @@ export default function Home() {
 
       <Section className="flex bg-stone-100 justify-center">
         <Testimonials />
+      </Section>
+      <Section className="flex  justify-center">
+        <AboutFamily />
       </Section>
 
       <Footer />
@@ -51,7 +55,7 @@ const ExampleJsx = () => {
         whileInView={{ opacity: 1 }}
       >
         <Balancer>
-          Hello <span className="alternate-font"> World</span>, welcome to the{" "}
+          <span className="alternate-font">Step</span> into{" "}
           <span className="alternate-font">Woven Legacy</span>
         </Balancer>
       </motion.h1>
@@ -65,10 +69,10 @@ const ExampleJsx = () => {
         }}
         whileInView={{ opacity: 1 }}
       >
-        Welcome to Woven Legacy, where tradition meets artistry in the world of
-        handcrafted rugs and carpets. Our showroom is dedicated to showcasing
-        exquisite pieces that reflect the rich heritage of carpet weaving while
-        embracing modern design sensibilities.
+        Where centuries of craftsmanship intertwine with contemporary elegance.
+        Each handcrafted rug and carpet in our collection is a testament to the
+        enduring legacy of skilled artisans, blending the richness of tradition
+        with the grace of modern design.
       </motion.p>
       <hr />
     </article>

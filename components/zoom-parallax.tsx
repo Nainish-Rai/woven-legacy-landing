@@ -25,32 +25,32 @@ const ZoomParallax: FC<Props> = ({ classes }) => {
 
   const pictures = [
     {
-      src: "https://images.unsplash.com/photo-1638905789085-a8611ef93e4c?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      src: "/q6.jpg",
       scale: scale1,
       classes: "relative w-[25%] h-[25%]",
     },
     {
-      src: "https://images.unsplash.com/photo-1669046637776-ad0f4e7cb827?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      src: "/q1.jpg",
       scale: scale2,
       classes: "relative top-[-30%] left-[5%] w-[35%] h-[30%]",
     },
     {
-      src: "https://images.unsplash.com/photo-1721283364251-e2221ec26a3b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fGNhcnBldHN8ZW58MHx8MHx8fDA%3D",
+      src: "/q2.jpg",
       scale: scale3,
       classes: "relative top-[-29%] left-[-25%] w-[20%] h-[28%]",
     },
     {
-      src: "https://images.unsplash.com/photo-1665316364243-aaf89f2dba25?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzd8fGNhcnBldHN8ZW58MHx8MHx8fDA%3D",
+      src: "/q3.jpg",
       scale: scale2,
       classes: "relative left-[27.5%] w-[25%] h-[25%]",
     },
     {
-      src: "https://images.unsplash.com/photo-1444362408440-274ecb6fc730?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      src: "/q4.jpg",
       scale: scale3,
       classes: "relative left-[-27.5%] w-[25%] h-[25%]",
     },
     {
-      src: "https://images.unsplash.com/photo-1509533423496-1627a90e02c1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      src: "/q5.jpg",
       scale: scale4,
       classes: "relative top-[27.5%] left-[5%] w-[20%] h-[25%]",
     },

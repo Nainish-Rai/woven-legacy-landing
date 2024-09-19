@@ -10,6 +10,7 @@ type Props = {
     img: string;
     title: string;
     subtitle: string;
+    description: string;
   };
 };
 
@@ -20,9 +21,9 @@ function NewAndFeaturedCard({ item }: Props) {
         variants={textVariant(0.3)}
         whileInView="show"
         initial="hidden"
-        whileHover={{ scale: 1.01 }}
+        whileHover={{ scale: 1.025 }}
         whileTap={{ scale: 0.99 }}
-        transition={{ duration: 0.4 }}
+        transition={{ duration: 0.2 }}
         className="w-full flex flex-col "
       >
         <Image
@@ -32,10 +33,10 @@ function NewAndFeaturedCard({ item }: Props) {
           className="w-full sm:m-0 h-80 cursor-pointer object-cover"
           height={500}
         />
-        <div className="mt-2 text-xl cursor-pointer hover:opacity-80 duration-200 underline underline-offset-[6px] font-medium">
+        <div className="mt-2 text-xl cursor-pointer hover:opacity-80 text-black duration-200  font-medium">
           {item.title}
         </div>
-        {/* <p>{item.subtitle}</p> */}
+        <div className="text-sm mt-2">{item.description}</div>
       </motion.div>
     </div>
   );

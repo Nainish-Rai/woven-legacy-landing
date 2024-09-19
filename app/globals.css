@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  scroll-behavior: smooth;
+}
+
 @font-face {
   font-family: "IvyPresto Display";
   src: url("/fonts/IvyPrestoDisplay-LightItalic.woff2") format("woff2"),

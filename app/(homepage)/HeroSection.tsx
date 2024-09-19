@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import Balancer from "react-wrap-balancer";
 import { motion } from "framer-motion";
 import { textVariant } from "@/lib/anims";
+import Link from "next/link";
 
 type Props = {};
 
@@ -17,10 +18,7 @@ function HeroSection({}: Props) {
         muted
         className="absolute brightness-[0.8] top-1/2 left-1/2 w-full h-full object-cover transform -translate-x-1/2 -translate-y-1/2"
       >
-        <source
-          src="https://www.boydblue.com/cdn/shop/videos/c/vp/631ec1ac1f764af8a96f53ed0ade4b1d/631ec1ac1f764af8a96f53ed0ade4b1d.HD-1080p-7.2Mbps-32234816.mp4?v=0"
-          type="video/mp4"
-        />
+        <source src="/hero.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div className="absolute brightness-[0.8] top-1/2 left-1/2 w-full h-full object-cover transform -translate-x-1/2 -translate-y-1/2    bg-black/5"></div>
@@ -35,19 +33,25 @@ function HeroSection({}: Props) {
           >
             <Balancer>Woven Legacy</Balancer>
           </motion.h1>
-          <motion.p
-            initial={{ opacity: 0 }}
-            transition={{
-              duration: 0.5,
-              delay: 0.6,
-              ease: "easeInOut",
-              type: "tween",
-            }}
-            whileInView={{ opacity: 1 }}
-            className=" cursor-pointer hover:opacity-50 duration-200 w-fit pt-16 border-b-2  pb-2 border-0  p-0 text-sm "
+          <Link
+            className="no-underline"
+            href="https://forms.gle/TSLRBZMvwDDHpuyk8"
+            target="_blank"
           >
-            SHOP NOW
-          </motion.p>
+            <motion.p
+              initial={{ opacity: 0 }}
+              transition={{
+                duration: 0.5,
+                delay: 0.6,
+                ease: "easeInOut",
+                type: "tween",
+              }}
+              whileInView={{ opacity: 1 }}
+              className=" cursor-pointer text-white  no-underline hover:opacity-50 duration-200 w-fit pt-16 border-b-2  pb-2 border-0  p-0 "
+            >
+              SHOP NOW
+            </motion.p>
+          </Link>
         </div>
       </div>
     </div>

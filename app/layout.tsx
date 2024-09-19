@@ -70,7 +70,9 @@ const Nav = ({ className, children, id }: NavProps) => {
           <MobileNav />
         </div>
         <Button asChild className="hidden rounded-none sm:flex">
-          <Link href="https://9d8.dev">Contact Us</Link>
+          <Link target="_blank" href="https://forms.gle/mtQVBCxkwU6rJMH29">
+            Contact Us
+          </Link>
         </Button>
       </div>
     </nav>

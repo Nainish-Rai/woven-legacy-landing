@@ -9,17 +9,16 @@ function Footer({}: Props) {
       heading: "Contact Us",
       links: [
         {
-          name: "1-800-123-4567",
-          url: "/",
+          name: "+919236788789",
+          url: "tel:+919236788789",
         },
         {
-          name: "123 Main Street",
-          url: "/",
+          name: "info@wovenlegacy.in",
+          url: "mailto:info@wovenlegacy.in",
         },
-
         {
-          name: "Mon-Fri 9am-5pm",
-          url: "/about",
+          name: "853, Katra Bajirao, Mirzapur - 231001, U.P. India ",
+          url: "https://maps.app.goo.gl/6aFjEYGe5pSmNtwC9",
         },
       ],
     },
@@ -60,13 +59,18 @@ function Footer({}: Props) {
     },
   ];
   return (
-    <footer className=" bg-[#264653] px-4 mt-48 lg:mt-8 text-amber-50 pt-16 w-full h-full">
+    <footer
+      id="footer"
+      className=" bg-[#264653] px-4 mt-48 lg:mt-8 text-amber-50 pt-16 w-full h-full"
+    >
       <div className="w-full max-w-7xl  mx-auto flex flex-col items-center">
         <h1 className="text-amber-50 sm:mb-4">
           Lets make your <span className="alternate-font">house</span> feel like{" "}
           <span className="alternate-font">home</span>
         </h1>
-        <p>Subscribe to our newsletter for updates, promotions and more</p>
+        <p>
+          Follow us on facebook, instagram for updates, promotions and more.
+        </p>
         <input
           type="text"
           placeholder="Enter your email address"
@@ -80,10 +84,11 @@ function Footer({}: Props) {
                 {column.links.map((link) => (
                   <li className="text-white" key={link.name}>
                     <a
-                      className="text-amber-50 sm:text-amber-50  text-lg font-light sm:no-underline"
+                      className="text-amber-50 sm:text-amber-50 prose-a:text-white text-sm prose-white  lg:text-lg font-light sm:no-underline"
                       href={link.url}
+                      target="_blank"
                     >
-                      {link.name}
+                      <p className="text-white no-underline ">{link.name}</p>
                     </a>
                   </li>
                 ))}
