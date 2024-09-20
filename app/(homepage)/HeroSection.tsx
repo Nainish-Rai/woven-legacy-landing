@@ -34,7 +34,7 @@ function HeroSection({}: Props) {
             <Balancer>Woven Legacy</Balancer>
           </motion.h1>
           <Link
-            className="no-underline"
+            className="no-underline sm:no-underline"
             href="https://forms.gle/TSLRBZMvwDDHpuyk8"
             target="_blank"
           >
@@ -47,7 +47,7 @@ function HeroSection({}: Props) {
                 type: "tween",
               }}
               whileInView={{ opacity: 1 }}
-              className=" cursor-pointer text-white  no-underline hover:opacity-50 duration-200 w-fit pt-16 border-b-2  pb-2 border-0  p-0 "
+              className=" cursor-pointer text-white  no-underline sm:no-underline hover:opacity-50 duration-200 w-fit pt-16 border-b-2  pb-2 border-0  p-0   underline-offset-8"
             >
               SHOP NOW
             </motion.p>
