@@ -25,12 +25,12 @@ const ZoomParallax: FC<Props> = ({ classes }) => {
 
   const pictures = [
     {
-      src: "/q6.jpg",
+      src: "/t2.jpg",
       scale: scale1,
       classes: "relative w-[25%] h-[25%]",
     },
     {
-      src: "/q1.jpg",
+      src: "/q6.jpg",
       scale: scale2,
       classes: "relative top-[-30%] left-[5%] w-[35%] h-[30%]",
     },
@@ -40,12 +40,12 @@ const ZoomParallax: FC<Props> = ({ classes }) => {
       classes: "relative top-[-29%] left-[-25%] w-[20%] h-[28%]",
     },
     {
-      src: "/q3.jpg",
+      src: "/uq1.jpg",
       scale: scale2,
       classes: "relative left-[27.5%] w-[25%] h-[25%]",
     },
     {
-      src: "/q4.jpg",
+      src: "/q7.jpg",
       scale: scale3,
       classes: "relative left-[-27.5%] w-[25%] h-[25%]",
     },
@@ -55,7 +55,7 @@ const ZoomParallax: FC<Props> = ({ classes }) => {
       classes: "relative top-[27.5%] left-[5%] w-[20%] h-[25%]",
     },
     {
-      src: "https://images.unsplash.com/photo-1655016698435-744036612ce8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDR8fGNhcnBldHN8ZW58MHx8MHx8fDA%3D",
+      src: "/t1.jpg",
       scale: scale5,
       classes: "relative top-[22.5%] left-[25%] w-[15%] h-[15%]",
     },

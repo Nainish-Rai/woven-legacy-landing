@@ -14,24 +14,24 @@ import TestimonialCard from "@/components/testimonial-card";
 const newAndFeaturedData = [
   {
     id: 4,
-    img: "https://images.unsplash.com/photo-1702310095333-dbb42b617453?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    name: "James O'Brien",
+    img: "/t3.jpg",
+    name: "Charlotte Blair, UK",
     message:
-      "The vintage-inspired rug I bought is not only beautiful but also incredibly durable. It's held up wonderfully in our high-traffic living room, and the colors are just as vibrant as the day we got it.",
+      "Beautiful Showroom generous Staff and great hospitality. One stop solution for all your needs",
   },
   {
     id: 5,
-    img: "https://images.unsplash.com/photo-1683277814188-7a1f3c83c923?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    name: "Aisha Patel",
+    img: "/t2.jpg",
+    name: "Tetsuya Kamoda, T Corporation Japan",
     message:
-      "I appreciate this company's commitment to ethical sourcing and sustainable practices. Knowing my beautiful rug was made responsibly makes me love it even more.",
+      "Sandeep is a family to me. I love visiting him. He is very hardworking and we will continue to extend this good relation in years to come ",
   },
   {
     id: 6,
-    img: "https://images.unsplash.com/photo-1671576585636-d857cdf0f06c?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    name: "David Müller",
+    img: "/t1.jpg",
+    name: "Steve Robs - USA",
     message:
-      "The custom rug service is fantastic! They worked with me to create a unique piece that perfectly fits my oddly-shaped room. The result is better than I could have imagined.",
+      "Loved the rugs. Even the kids like it. Thank you so much for the Tip-Top service as always.",
   },
 ];
 

@@ -18,8 +18,11 @@ import { Separator } from "@/components/ui/separator";
 // Define the menu items
 const mainMenu = {
   home: "/",
-  about: "#about",
-  contact: "#footer",
+  about: "/about",
+  contact: "/contact-us",
+  shop: "/shop",
+  terms: "/terms-and-conditions",
+  collections: "/rug-collection",
 };
 
 export function MobileNav() {

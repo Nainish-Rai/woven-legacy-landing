@@ -1,3 +1,4 @@
+"use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Balancer from "react-wrap-balancer";
@@ -8,11 +9,12 @@ export const AboutFamily = () => {
       id="about"
       className=" lg:flex w-full max-w-7xl px-2 flex-col lg:flex-row flex lg:px-0 prose-m-none"
     >
-      <div className="w-full lg:w-1/2 lg:p-16 p-4 pt-32">
+      <div className="w-full flex flex-col justify-center lg:w-1/2 lg:p-16 p-4 pt-32">
         <motion.h1
           initial={{ opacity: 0 }}
           transition={{ duration: 0.5, ease: "easeInOut", type: "tween" }}
           whileInView={{ opacity: 1 }}
+          className="text-4xl lg:text-5xl font-bold "
         >
           <Balancer>
             <span className="alternate-font">Family</span>{" "}
@@ -28,6 +30,7 @@ export const AboutFamily = () => {
             type: "tween",
           }}
           whileInView={{ opacity: 1 }}
+          className="mt-6"
         >
           <span className="font-bold">Woven Legacy</span> is the embodiment of a
           journey that began with Sundeep Exports, a name synonymous with

@@ -18,15 +18,15 @@ const newAndFeaturedData = [
       "Our rugs and carpets are masterpieces of handwoven artistry. Crafted with precision and passion, each piece tells a story—capturing the essence of heritage while adding a timeless touch to modern interiors.",
     img: "/rugs.jpg",
   },
-  {
-    id: 2,
-    title: "Cushion Covers",
-    subtitle:
-      "With a fusion of traditional weaving techniques and contemporary aesthetics",
-    description:
-      "Our cushion covers are designed to be more than just accents. These pieces add depth and personality, enhancing your décor with a touch of heritage and flair.",
-    img: "/cushion.jpg",
-  },
+  // {
+  //   id: 2,
+  //   title: "Cushion Covers",
+  //   subtitle:
+  //     "With a fusion of traditional weaving techniques and contemporary aesthetics",
+  //   description:
+  //     "Our cushion covers are designed to be more than just accents. These pieces add depth and personality, enhancing your décor with a touch of heritage and flair.",
+  //   img: "/cushion.jpg",
+  // },
   {
     id: 3,
     title: "Throws & Fabrics",
@@ -46,13 +46,13 @@ const NewAndFeatured = () => {
         whileInView="show"
         viewport={{ amount: 0.25 }}
         transition={{ duration: 0.5, type: "tween" }}
-        className=" text-4xl lg:text-5xl font-bold "
+        className=" text-4xl lg:text-5xl text-center font-bold "
       >
         <Balancer>
           <span className="alternate-font"> Crafted Collections</span>{" "}
         </Balancer>
       </motion.h1>
-      <div className="w-full flex-col lg:flex-row flex">
+      <div className="w-full flex-col lg:flex-row justify-center flex">
         {newAndFeaturedData.map((item) => (
           <NewAndFeaturedCard item={item} key={item.id} />
         ))}

@@ -13,6 +13,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { cn } from "@/lib/utils";
+import Footer from "@/components/footer";
+import { Main } from "@/components/craft";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -37,6 +39,9 @@ export default function RootLayout({
       >
         <Nav />
         {children}
+        <Main>
+          <Footer />
+        </Main>
       </body>
     </html>
   );
@@ -70,9 +75,7 @@ const Nav = ({ className, children, id }: NavProps) => {
           <MobileNav />
         </div>
         <Button asChild className="hidden rounded-none sm:flex">
-          <Link target="_blank" href="https://forms.gle/mtQVBCxkwU6rJMH29">
-            Contact Us
-          </Link>
+          <Link href="/contact-us">Contact Us</Link>
         </Button>
       </div>
     </nav>

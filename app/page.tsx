@@ -40,8 +40,6 @@ export default function Home() {
       <Section className="flex  justify-center">
         <AboutFamily />
       </Section>
-
-      <Footer />
     </Main>
   );
 }

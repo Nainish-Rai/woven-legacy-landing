@@ -45,7 +45,7 @@ function Footer({}: Props) {
       links: [
         {
           name: "Terms",
-          url: "/",
+          url: "/terms-and-conditions",
         },
         {
           name: "Privacy",

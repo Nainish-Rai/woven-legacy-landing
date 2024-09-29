@@ -58,35 +58,30 @@ export function NavMenu() {
     <NavigationMenu className="hidden md:block">
       <NavigationMenuList>
         <NavigationMenuItem>
-          <Link
-            target="_blank"
-            href="https://forms.gle/TSLRBZMvwDDHpuyk8"
-            legacyBehavior
-            passHref
-          >
+          <Link target="_blank" href="/shop" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Shop
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="#collections" legacyBehavior passHref>
+          <Link href="/rug-collection" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Collections
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="#about" legacyBehavior passHref>
+          <Link href="/about" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               About
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="#footer" legacyBehavior passHref>
+          <Link href="/terms-and-conditions" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Contact
+              Terms &amp; Conditions
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>

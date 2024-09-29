@@ -18,9 +18,8 @@ type Props = {
 function NewAndFeaturedCard({ item }: Props) {
   return (
     <Link
-      target="_blank"
       className="lg:w-1/3 w-full lg:pr-6 no-underline sm:no-underline"
-      href={`https://docs.google.com/forms/d/e/1FAIpQLSdJuBAb6E48MWa7n9MZLShsnCj83i4tLBti8LaSOa15HIr_vQ/viewform`}
+      href={`${item.id == 1 ? "/rug-collection" : "/throw-collection"}`}
     >
       <div className="w-full" key={item.id}>
         <motion.div
