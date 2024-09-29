@@ -1,4 +1,4 @@
-﻿// pages/terms.js
+﻿// disable ' &apos; for entire file
 
 import Head from "next/head";
 

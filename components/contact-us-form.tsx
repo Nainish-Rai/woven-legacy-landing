@@ -24,7 +24,7 @@ const formSchema = z.object({
   email: z.string().email({
     message: "Please enter a valid email address.",
   }),
-  message: z.string().min(5, {
+  message: z.string().min(10, {
     message: "Message must be at least 5 characters.",
   }),
   address: z.string().min(5, {
@@ -38,32 +38,27 @@ const formSchema = z.object({
 
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
       email: "",
       message: "",
-      address: "",
-      phone: "",
     },
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    console.log(form.getValues());
-    console.log(":ehehe");
     setIsSubmitting(true);
 
     // Replace this URL with your actual Google Form URL
     const googleFormUrl =
-      "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfQ6scphIfNfGw7BeWNuHh8MZVvXjVGz-YiVqjOrlqMnIu73A/formResponse";
+      "https://docs.google.com/forms/d/e/17IWrJFWy2xu4oMjgBlIN3_-yCc2gQxlZRsk1MJqS5js/formResponse";
 
     // Map your form fields to Google Form field names
     const formData = new FormData();
-    formData.append("entry.1011783892", values.name); //
+    formData.append("entry.1011783892", values.name); // Replace with your actual entry IDs
     formData.append("entry.220422147", values.email);
-    formData.append("entry.782482577", values.phone);
     formData.append("entry.597661191", values.message);
 
     fetch(googleFormUrl, {
@@ -139,11 +134,7 @@ export default function ContactForm() {
           )}
         />
 
-        <Button
-          onClick={form.handleSubmit(onSubmit)}
-          type="submit"
-          disabled={isSubmitting}
-        >
+        <Button type="submit" disabled={isSubmitting}>
           {isSubmitting ? "Submitting..." : "Submit"}
         </Button>
       </form>
