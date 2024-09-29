@@ -166,7 +166,7 @@ export default function RugOrderForm() {
           />
         </div>
 
-        <Button type="submit" className="w-full" disabled={isSubmitting}>
+        <Button type="submit" className="w-fit" disabled={isSubmitting}>
           {isSubmitting ? "Submitting..." : "Submit Rug Order Request"}
         </Button>
       </form>
