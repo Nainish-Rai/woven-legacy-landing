@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { NavMenu } from "@/components/nav/nav-menu";
 import { MobileNav } from "@/components/nav/mobile-nav";
 import { ThemeToggle } from "@/components/theme/theme-toggle";
+import { Toaster } from "react-hot-toast";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -39,6 +40,7 @@ export default function RootLayout({
       >
         <Nav />
         {children}
+        <Toaster />
         <Main>
           <Footer />
         </Main>

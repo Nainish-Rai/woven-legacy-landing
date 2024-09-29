@@ -1,143 +1,107 @@
 "use client";
 
 import { useState } from "react";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import * as z from "zod";
 import { Button } from "@/components/ui/button";
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-
-const formSchema = z.object({
-  name: z.string().min(2, {
-    message: "Name must be at least 2 characters.",
-  }),
-  email: z.string().email({
-    message: "Please enter a valid email address.",
-  }),
-  message: z.string().min(10, {
-    message: "Message must be at least 5 characters.",
-  }),
-  address: z.string().min(5, {
-    message: "Address must be at least 5 characters.",
-  }),
-
-  phone: z.string().min(10, {
-    message: "Phone number must be at least 10 characters.",
-  }),
-});
+import toast from "react-hot-toast";
 
 export default function ContactForm() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      name: "",
-      email: "",
-      message: "",
-    },
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState("");
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     setIsSubmitting(true);
+    setSubmitMessage("");
 
-    // Replace this URL with your actual Google Form URL
-    const googleFormUrl =
-      "https://docs.google.com/forms/d/e/17IWrJFWy2xu4oMjgBlIN3_-yCc2gQxlZRsk1MJqS5js/formResponse";
+    try {
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbw8EA-NCKzY3p5GXyEn0U85n2PCncwLQ2-gmUyZcdlp4fayxp4i7FFfXLOfDI-u3myVUw/exec",
+        {
+          method: "POST",
+          body: JSON.stringify(formData),
+          headers: {
+            "Content-Type": "application/json",
+          },
+          mode: "no-cors",
+        }
+      );
 
-    // Map your form fields to Google Form field names
-    const formData = new FormData();
-    formData.append("entry.1011783892", values.name); // Replace with your actual entry IDs
-    formData.append("entry.220422147", values.email);
-    formData.append("entry.597661191", values.message);
+      toast.success(
+        "Thank you for your message! We will get back to you soon."
+      );
+    } catch (error) {
+      toast.error("An error occurred while sending the message.");
+    }
 
-    fetch(googleFormUrl, {
-      method: "POST",
-      body: formData,
-      mode: "no-cors",
-    })
-      .then(() => {
-        setIsSubmitting(false);
-        form.reset();
-        alert("Form submitted successfully!");
-      })
-      .catch((error) => {
-        setIsSubmitting(false);
-        console.error("Error:", error);
-        alert("An error occurred. Please try again.");
-      });
-  }
+    setIsSubmitting(false);
+  };
 
   return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 w-full">
-        <FormField
-          control={form.control}
-          name="name"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Name</FormLabel>
-              <FormControl>
-                <Input placeholder="Your name" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="email"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Email</FormLabel>
-              <FormControl>
-                <Input type="email" placeholder="Your email" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="phone"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Phone no.</FormLabel>
-              <FormControl>
-                <Input placeholder=" Your phone number" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="message"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Message</FormLabel>
-              <FormControl>
-                <Textarea placeholder="Your message" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-
+    <div className="max-w-3xl w-full mx-auto mt-10">
+      {/* <h1 className="text-2xl font-bold mb-5 w-full">Contact U</h1> */}
+      <form onSubmit={handleSubmit} className="space-y-4 w-full">
+        <div>
+          <Label htmlFor="name">Name</Label>
+          <Input
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <Label htmlFor="phone">Phone</Label>
+          <Input
+            id="phone"
+            name="phone"
+            type="tel"
+            value={formData.phone}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <Label htmlFor="email">Email</Label>
+          <Input
+            id="email"
+            name="email"
+            type="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <Label htmlFor="message">Message</Label>
+          <Textarea
+            id="message"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+          />
+        </div>
         <Button type="submit" disabled={isSubmitting}>
           {isSubmitting ? "Submitting..." : "Submit"}
         </Button>
       </form>
-    </Form>
+    </div>
   );
 }

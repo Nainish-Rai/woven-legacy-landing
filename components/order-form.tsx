@@ -1,221 +1,175 @@
 "use client";
+
 import { useState } from "react";
-import { toast } from "sonner";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import * as z from "zod";
-import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import toast from "react-hot-toast";
 
-const formSchema = z.object({
-  name_7: z.string(),
-  name_6: z.string(),
-  name_1: z.string(),
-  name_2: z.string(),
-  name_3: z.string(),
-  name_4: z.string(),
-  name_5: z.string(),
-  name_8: z.string(),
-});
-
-export default function OrderForm() {
-  // Insert constants here
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      name_1: "",
-      name_2: "",
-      name_3: "",
-      name_4: "",
-      name_5: "",
-      name_6: "",
-      name_7: "",
-      name_8: "",
-    },
+export default function RugOrderForm() {
+  const [formData, setFormData] = useState({
+    name: "",
+    contact: "",
+    rugSize: "",
+    rugMaterial: "",
+    rugColor: "",
+    patternOrDesign: "",
+    additionalSpecification: "",
+    estimatedBudget: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState("");
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     setIsSubmitting(true);
+    setSubmitMessage("");
 
-    // Replace this URL with your actual Google Form URL
-    const googleFormUrl =
-      "https://docs.google.com/forms/d/e/1FAIpQLSdXYJ1eJaAj77sdhlEEs3ObknpwvfEMkRURNF3ixAMXWzn6xQ/formResponse";
+    try {
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbzsqGkJ5tNuHgoR3R-MLLdn584qpm5sBx62Lz-rFBNoNA2-SugujJ6i8XmzjPFqHbaa/exec",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+          mode: "no-cors",
+        }
+      );
 
-    // Map your form fields to Google Form field names
-    const formData = new FormData();
-    formData.append("entry.1024004057", values.name_1); // Replace with your actual entry IDs
-    formData.append("entry.1061594089", values.name_2); // Replace with your actual entry IDs
-    formData.append("entry.168358721", values.name_3); // Replace with your actual entry IDs
-    formData.append("entry.1042008841", values.name_4); // Replace with your actual entry IDs
-    formData.append("entry.1623726119", values.name_5); // Replace with your actual entry IDs
-    formData.append("entry.1245712618", values.name_6); // Replace with your actual entry IDs
-    formData.append("entry.487654580", values.name_7); // Replace with your actual entry IDs
-    formData.append("entry.1890817689", values.name_8); // Replace with your actual entry IDs
-
-    console.log(formData);
-
-    fetch(googleFormUrl, {
-      method: "POST",
-      body: formData,
-      mode: "no-cors",
-    })
-      .then(() => {
-        setIsSubmitting(false);
-        form.reset();
-        alert("Form submitted successfully!");
-      })
-      .catch((error) => {
-        setIsSubmitting(false);
-        console.error("Error:", error);
-        alert("An error occurred. Please try again.");
+      toast.success("Thank you for your order!");
+      setFormData({
+        name: "",
+        contact: "",
+        rugSize: "",
+        rugMaterial: "",
+        rugColor: "",
+        patternOrDesign: "",
+        additionalSpecification: "",
+        estimatedBudget: "",
       });
-  }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast.error("There was an error submitting the form. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
-    <Form {...form}>
-      <form
-        onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-8 w-full  mx-auto py-10"
-      >
-        <FormField
-          control={form.control}
-          name="name_7"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Name</FormLabel>
-              <FormControl>
-                <Input placeholder="Enter your name" required {...field} />
-              </FormControl>
+    <div className="w-full mx-auto mt-10 p-6 ">
+      <form onSubmit={handleSubmit} className="space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <Label htmlFor="name">Name</Label>
+            <Input
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div>
+            <Label htmlFor="contact">Contact (Phone or Email)</Label>
+            <Input
+              id="contact"
+              name="contact"
+              value={formData.contact}
+              onChange={handleChange}
+              required
+            />
+          </div>
+        </div>
 
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+        <div>
+          <Label htmlFor="rugSize">Rug Size</Label>
+          <Input
+            id="rugSize"
+            name="rugSize"
+            value={formData.rugSize}
+            onChange={handleChange}
+            placeholder="e.g., 5' x 7', 8' x 10', Custom"
+            required
+          />
+        </div>
 
-        <FormField
-          control={form.control}
-          name="name_6"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Contact Information</FormLabel>
-              <FormControl>
-                <Input
-                  placeholder="Enter your contact information "
-                  required
-                  {...field}
-                />
-              </FormControl>
+        <div>
+          <Label htmlFor="rugMaterial">Rug Material</Label>
+          <Input
+            id="rugMaterial"
+            name="rugMaterial"
+            value={formData.rugMaterial}
+            onChange={handleChange}
+            placeholder="e.g., Wool, Silk, Cotton, Synthetic"
+            required
+          />
+        </div>
 
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+        <div>
+          <Label htmlFor="rugColor">Rug Color</Label>
+          <Input
+            id="rugColor"
+            name="rugColor"
+            value={formData.rugColor}
+            onChange={handleChange}
+            placeholder="e.g., Blue, Red, Multicolor"
+            required
+          />
+        </div>
 
-        <FormField
-          control={form.control}
-          name="name_1"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Rug Size (Length x Width):</FormLabel>
-              <FormControl>
-                <Input placeholder=" Enter size  " {...field} />
-              </FormControl>
+        <div>
+          <Label htmlFor="patternOrDesign">Pattern or Design</Label>
+          <Input
+            id="patternOrDesign"
+            name="patternOrDesign"
+            value={formData.patternOrDesign}
+            onChange={handleChange}
+            placeholder="e.g., Floral, Geometric, Abstract"
+            required
+          />
+        </div>
 
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+        <div>
+          <Label htmlFor="additionalSpecification">
+            Additional Specifications
+          </Label>
+          <Textarea
+            id="additionalSpecification"
+            name="additionalSpecification"
+            value={formData.additionalSpecification}
+            onChange={handleChange}
+            placeholder="Any additional details or requirements"
+            rows={4}
+          />
+        </div>
 
-        <FormField
-          control={form.control}
-          name="name_2"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Rug Material:</FormLabel>
-              <FormControl>
-                <Input placeholder="Enter material " {...field} />
-              </FormControl>
+        <div>
+          <Label htmlFor="estimatedBudget">Estimated Budget</Label>
+          <Input
+            id="estimatedBudget"
+            name="estimatedBudget"
+            type="text"
+            value={formData.estimatedBudget}
+            onChange={handleChange}
+            placeholder="Enter your budget (e.g., $500, $1000-$1500)"
+            required
+          />
+        </div>
 
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-
-        <FormField
-          control={form.control}
-          name="name_3"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Rug Color</FormLabel>
-              <FormControl>
-                <Input placeholder="Enter rug color" {...field} />
-              </FormControl>
-
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-
-        <FormField
-          control={form.control}
-          name="name_4"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Pattern or Design</FormLabel>
-              <FormControl>
-                <Input placeholder="Enter pattern or design" {...field} />
-              </FormControl>
-
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-
-        <FormField
-          control={form.control}
-          name="name_5"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Additional Specifications(optional)</FormLabel>
-              <FormControl>
-                <Input
-                  placeholder="Enter additional specifications"
-                  {...field}
-                />
-              </FormControl>
-
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-
-        <FormField
-          control={form.control}
-          name="name_8"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Estimated Budget</FormLabel>
-              <FormControl>
-                <Input placeholder="Provide budget" {...field} />
-              </FormControl>
-
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <Button type="submit">Submit</Button>
+        <Button type="submit" className="w-full" disabled={isSubmitting}>
+          {isSubmitting ? "Submitting..." : "Submit Rug Order Request"}
+        </Button>
       </form>
-    </Form>
+    </div>
   );
 }
