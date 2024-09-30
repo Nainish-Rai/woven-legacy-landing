@@ -8,7 +8,9 @@
 
 @font-face {
   font-family: "IvyPresto Display";
-  src: url("/fonts/IvyPrestoDisplay-LightItalic.woff2") format("woff2"),
+  src: local("IvyPresto Display"),
+    url("/fonts/IvyPrestoDisplay-LightItalic.ttf") format("truetype"),
+    url("/fonts/IvyPrestoDisplay-LightItalic.woff2") format("woff2"),
     url("/fonts/IvyPrestoDisplay-LightItalic.woff") format("woff");
 
   font-style: italic;
@@ -17,7 +19,9 @@
 
 @font-face {
   font-family: "HelveticaNeue";
-  src: url("/fonts/HelveticaNeueLight.woff2") format("woff2"),
+  src: local("HelveticaNeue"),
+    url("/fonts/HelveticaNeueLight.ttf") format("truetype"),
+    url("/fonts/HelveticaNeueLight.woff2") format("woff2"),
     url("/fonts/HelveticaNeueLight.woff") format("woff");
   font-style: normal;
   font-display: swap;
@@ -63,6 +67,11 @@
 
 .primary-font {
   font-family: "HelveticaNeue", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  text-underline-offset: 2px;
 }
 
 @layer base {

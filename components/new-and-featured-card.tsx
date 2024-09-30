@@ -18,7 +18,7 @@ type Props = {
 function NewAndFeaturedCard({ item }: Props) {
   return (
     <Link
-      className="lg:w-1/3 w-full lg:pr-6 no-underline sm:no-underline"
+      className="lg:w-1/3 w-full lg:pr-6 no-underline  sm:no-underline"
       href={`${item.id == 1 ? "/rug-collection" : "/throw-collection"}`}
     >
       <div className="w-full" key={item.id}>
@@ -41,7 +41,7 @@ function NewAndFeaturedCard({ item }: Props) {
           <div className="mt-2 text-xl cursor-pointer hover:opacity-80 text-black duration-200  font-medium">
             {item.title}
           </div>
-          <div className="text-sm mt-2">{item.description}</div>
+          <div className="text-sm  mt-2">{item.description}</div>
         </motion.div>
       </div>
     </Link>

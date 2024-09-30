@@ -46,7 +46,7 @@ const Main = ({ children, className, id }: MainProps) => {
         // Prose Strong
         "prose-strong:font-semibold",
         // Inline Links
-        "prose-a:underline prose-a:decoration-primary/50 prose-a:underline-offset-2 prose-a:text-foreground/75 prose-a:transition-all",
+        " prose-a:decoration-primary/50  prose-a:text-foreground/75 prose-a:transition-all",
         // Inline Link Hover
         "hover:prose-a:decoration-primary hover:prose-a:text-foreground",
         // Blockquotes
@@ -112,7 +112,7 @@ const Article = ({ children, className, id }: ArticleProps) => {
         // Prose Strong
         "prose-strong:font-semibold",
         // Inline Links
-        "prose-a:underline prose-a:decoration-primary/50 prose-a:underline-offset-2 prose-a:text-foreground/75 prose-a:transition-all",
+        " prose-a:decoration-primary/50  prose-a:text-foreground/75 prose-a:transition-all",
         // Inline Link Hover
         "hover:prose-a:decoration-primary hover:prose-a:text-foreground",
         // Blockquotes

@@ -27,16 +27,16 @@ function Footer({}: Props) {
       links: [
         {
           name: "Help Center",
-          url: "/",
+          url: "/contact-us",
         },
 
         {
           name: "Account",
-          url: "/",
+          url: "/contact-us",
         },
         {
           name: "Email Us",
-          url: "/",
+          url: "/contact-us",
         },
       ],
     },
@@ -49,11 +49,11 @@ function Footer({}: Props) {
         },
         {
           name: "Privacy",
-          url: "/",
+          url: "/privacy",
         },
         {
           name: "Cookies",
-          url: "/",
+          url: "/privacy",
         },
       ],
     },
@@ -71,24 +71,21 @@ function Footer({}: Props) {
         <p>
           Follow us on facebook, instagram for updates, promotions and more.
         </p>
-        <input
-          type="text"
-          placeholder="Enter your email address"
-          className="text-black px-8 w-full p-2 placeholder:text-black/70 max-w-lg mt-6"
-        />
+
         <div className="flex flex-wrap w-full lg:pl-16 mt-14 ">
           {columns.map((column) => (
-            <div key={column.heading} className="lg:w-1/4 w-1/2 flex-col flex">
+            <div key={column.heading} className="lg:w-1/4  w-1/2 flex-col flex">
               <p className="text-amber-50 text-xl">{column.heading}</p>
               <ul className="sm:mt-0 list-none -ml-9 ">
                 {column.links.map((link) => (
                   <li className="text-white" key={link.name}>
                     <a
-                      className="text-amber-50 sm:text-amber-50 prose-a:text-white text-sm prose-white  lg:text-lg font-light sm:no-underline"
+                      className="text-amber-50 sm:text-amber-50 prose-a:text-white text-sm prose-white  lg:text-sm hover:opacity-40   font-light no-underline sm:no-underline"
                       href={link.url}
-                      target="_blank"
                     >
-                      <p className="text-white no-underline ">{link.name}</p>
+                      <p className="text-white max-w-48 no-underline ">
+                        {link.name}
+                      </p>
                     </a>
                   </li>
                 ))}
