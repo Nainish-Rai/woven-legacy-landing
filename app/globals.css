@@ -13,7 +13,7 @@
     url("/fonts/IvyPrestoDisplay-LightItalic.woff2") format("woff2"),
     url("/fonts/IvyPrestoDisplay-LightItalic.woff") format("woff");
 
-  font-style: italic;
+  font-style: normal;
   font-display: swap;
   font-weight: 1 1000;
 }
