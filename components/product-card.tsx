@@ -29,8 +29,8 @@ function ProductCard({ title, images }: Props) {
       viewport={{ once: true }}
       className="w-full lg:w-1/3 py-1 lg:p-4 lg:py-8 lg:px-1 "
     >
-      <div className="w-full bg-white shadow-sm py-2 lg:p-2 lg:py-4 rounded   ">
-        <div className=" flex flex-col flex-wrap items-center lg:flex-col   max-w-full w-full">
+      <div className="w-full bg-white shadow-sm h-fit py-2 lg:p-2 lg:py-4 rounded   ">
+        <div className=" flex flex-col flex-wrap items-center lg:flex-col    max-w-full w-full">
           <p className="text-base lg:text-lg text-center max-w-sm  alternate-font  font-semibold px-4  mb-2   ">
             {title}
           </p>
@@ -48,7 +48,7 @@ function ProductCard({ title, images }: Props) {
             height={500}
             className="w-full  p-1 h-full  rounded-xl"
           /> */}
-          <Carousel className="w-full max-w-[85%] ">
+          <Carousel className="w-full h-fit max-w-[85%] ">
             <CarouselContent className="p-0">
               {images.map((image, index) => (
                 <CarouselItem key={index}>
@@ -63,9 +63,11 @@ function ProductCard({ title, images }: Props) {
                       />
                     </CardContent>
                   </Card>
-                  <div className="flex  justify-center">
+                  <div className="flex  justify-center mt-2">
                     <Dot
-                      className={` transtition duration-200   ${
+                      size={24}
+                      fontSize={12}
+                      className={` transtition duration-200      ${
                         index === 0 ? "opacity-80" : "opacity-20"
                       }`}
                     />
