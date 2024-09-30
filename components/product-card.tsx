@@ -13,6 +13,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { Dot } from "lucide-react";
 
 type Props = {
   title: string;
@@ -47,7 +48,7 @@ function ProductCard({ title, images }: Props) {
             height={500}
             className="w-full  p-1 h-full  rounded-xl"
           /> */}
-          <Carousel className="w-full max-w-[70%] ">
+          <Carousel className="w-full max-w-[85%] ">
             <CarouselContent className="p-0">
               {images.map((image, index) => (
                 <CarouselItem key={index}>
@@ -62,11 +63,24 @@ function ProductCard({ title, images }: Props) {
                       />
                     </CardContent>
                   </Card>
+                  <div className="flex  justify-center">
+                    <Dot
+                      className={` transtition duration-200   ${
+                        index === 0 ? "opacity-80" : "opacity-20"
+                      }`}
+                    />
+                    <Dot
+                      className={`   ${
+                        index === 1 ? "opacity-80" : "opacity-20"
+                      }`}
+                    />
+                  </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
+
+            {/* <CarouselPrevious /> */}
+            {/* <CarouselNext /> */}
           </Carousel>
         </div>
       </div>

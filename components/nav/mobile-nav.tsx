@@ -17,12 +17,14 @@ import { Separator } from "@/components/ui/separator";
 
 // Define the menu items
 const mainMenu = {
-  home: "/",
-  about: "/about",
-  contact: "/contact-us",
-  shop: "/shop",
-  terms: "/terms-and-conditions",
-  collections: "/rug-collection",
+  Home: "/",
+  About: "/about",
+  Contact: "/contact-us",
+  Collections: "/collections",
+  Shop: "/shop",
+  Customized: "/custom-order",
+  Terms: "/terms-and-conditions",
+  Privacy: "/terms-and-conditions",
 };
 
 export function MobileNav() {

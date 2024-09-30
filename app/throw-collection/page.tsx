@@ -16,6 +16,15 @@ function Throw() {
         >
           Throws Collections
         </motion.h1>
+        <motion.p
+          initial="hidden"
+          whileInView="show"
+          variants={textVariant(0.3)}
+          className="text-sm lg:text-base my-4 mb-8 mx-auto mt-6 text-center w-full lg:w-1/2"
+        >
+          Our throws collection is made with high-quality materials and
+          handcrafted to ensure durability and longevity.
+        </motion.p>
         {throwCollection.map((collection) => (
           <div key={collection.name} className="mt-16">
             <h1 className="text-3xl font-bold mb-4  alternate-font pl-8">

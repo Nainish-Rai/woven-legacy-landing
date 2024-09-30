@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Twitter } from "lucide-react";
+import Link from "next/link";
 import React from "react";
 
 type Props = {};
@@ -94,11 +95,24 @@ function Footer({}: Props) {
           ))}
           <div>
             <p className="text-amber-50 text-lg">Follow Us</p>
-            <div className="flex gap-4 -ml-3 flex-row mt-4">
+            <div className="flex gap-4 justify-center -ml-3 flex-row mt-4">
               {" "}
-              <Facebook className="cursor-pointer hover:opacity-60 duration-200" />
-              <Instagram className="cursor-pointer hover:opacity-60 duration-200" />
-              <Twitter className="cursor-pointer hover:opacity-60 duration-200" />
+              <Link
+                href={
+                  "https://www.instagram.com/woven_legacy_?igsh=djQyd3o1OGpjN3h0"
+                }
+                className=""
+              >
+                <Instagram className="cursor-pointer text-amber-50 hover:opacity-60 duration-200" />
+              </Link>
+              <Link
+                href={
+                  "https://www.facebook.com/profile.php?id=61564026937126&mibextid=LQQJ4d"
+                }
+              >
+                <Facebook className="cursor-pointer text-amber-50 hover:opacity-60 duration-200" />
+              </Link>
+              {/* <Twitter className="cursor-pointer hover:opacity-60 duration-200" /> */}
             </div>
           </div>
         </div>

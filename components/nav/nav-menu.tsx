@@ -81,7 +81,7 @@ export function NavMenu() {
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <Link href="/custom" legacyBehavior passHref>
+          <Link href="/custom-order" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Custom Order
             </NavigationMenuLink>
