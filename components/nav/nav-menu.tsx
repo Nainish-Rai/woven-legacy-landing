@@ -75,18 +75,18 @@ export function NavMenu() {
         <NavigationMenuItem>
           <Link target="_blank" href="/shop" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Shop
+              Shop & Custom Order
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
 
-        <NavigationMenuItem>
+        {/* <NavigationMenuItem>
           <Link href="/custom-order" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Custom Order
             </NavigationMenuLink>
           </Link>
-        </NavigationMenuItem>
+        </NavigationMenuItem> */}
       </NavigationMenuList>
     </NavigationMenu>
   );

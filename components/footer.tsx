@@ -49,11 +49,7 @@ function Footer({}: Props) {
           url: "/terms-and-conditions",
         },
         {
-          name: "Privacy",
-          url: "/privacy",
-        },
-        {
-          name: "Cookies",
+          name: "Privacy & Cookies",
           url: "/privacy",
         },
       ],

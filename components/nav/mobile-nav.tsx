@@ -22,7 +22,7 @@ const mainMenu = {
   Contact: "/contact-us",
   Collections: "/collections",
   Shop: "/shop",
-  Customized: "/custom-order",
+  // Customized: "/custom-order",
   Terms: "/terms-and-conditions",
   Privacy: "/terms-and-conditions",
 };
