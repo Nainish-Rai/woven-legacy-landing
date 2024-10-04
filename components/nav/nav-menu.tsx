@@ -75,7 +75,7 @@ export function NavMenu() {
         <NavigationMenuItem>
           <Link target="_blank" href="/shop" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Shop & Custom Order
+              Shop
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>

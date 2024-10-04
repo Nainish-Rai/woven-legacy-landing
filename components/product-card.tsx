@@ -48,7 +48,7 @@ function ProductCard({ title, images }: Props) {
             height={500}
             className="w-full  p-1 h-full  rounded-xl"
           /> */}
-          <Carousel className="w-full h-fit max-w-[85%] ">
+          <Carousel className="w-full h-fit  max-w-[85%] ">
             <CarouselContent className="p-0">
               {images.map((image, index) => (
                 <CarouselItem key={index}>
@@ -59,7 +59,7 @@ function ProductCard({ title, images }: Props) {
                         alt={title}
                         width={500}
                         height={500}
-                        className="w-full   h-full  rounded-xl"
+                        className="w-full   h-full max-h-[500px] min-h-[350px]  rounded-xl"
                       />
                     </CardContent>
                   </Card>

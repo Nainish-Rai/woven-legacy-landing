@@ -18,39 +18,39 @@ export const rugCollection = {
             "/Harmony - Flatweave - Kilim - Wool and Cotton - GSM - 1400 (2).jpg",
           ],
         },
-        {
-          title: "Artistic - Printed Handloom - Wool and Tencil - GSM - 3000",
-          image: [
-            "/Artistic - Printed Handloom - Wool and Tencil - GSM - 3000 (1).jpg",
-            "/Artistic - Printed Handloom - Wool and Tencil - GSM - 3000 (2).jpg",
-          ],
-        },
-        {
-          title: "Mystic - Hand Knotted - Wool and Cotton - GSM - 4500",
-          image: [
-            "/Mystic - Hand Knotted - Wool and Cotton - GSM - 4500 (1).jpg",
-            "/Mystic - Hand Knotted - Wool and Cotton - GSM - 4500 (2).jpg",
-          ],
-        },
+        // {
+        //   title: "Artistic - Printed Handloom - Wool and Tencil - GSM - 3000",
+        //   image: [
+        //     "/Artistic - Printed Handloom - Wool and Tencil - GSM - 3000 (1).jpg",
+        //     "/Artistic - Printed Handloom - Wool and Tencil - GSM - 3000 (2).jpg",
+        //   ],
+        // },
+        // {
+        //   title: "Mystic - Hand Knotted - Wool and Cotton - GSM - 4500",
+        //   image: [
+        //     "/Mystic - Hand Knotted - Wool and Cotton - GSM - 4500 (1).jpg",
+        //     "/Mystic - Hand Knotted - Wool and Cotton - GSM - 4500 (2).jpg",
+        //   ],
+        // },
       ],
     },
     {
       name: "Eros Collection",
       products: [
-        {
-          title: "Artistic - Printed Handloom - Wool and Tencil - GSM - 3000",
-          image: [
-            "/Artistic - Printed Handloom - Wool and Tencil - GSM - 3000 (1).jpg",
-            "/Artistic - Printed Handloom - Wool and Tencil - GSM - 3000 (2).jpg",
-          ],
-        },
-        {
-          title: "Mystic - Hand Knotted - Wool and Cotton - GSM - 4500",
-          image: [
-            "/Mystic - Hand Knotted - Wool and Cotton - GSM - 4500 (1).jpg",
-            "/Mystic - Hand Knotted - Wool and Cotton - GSM - 4500 (2).jpg",
-          ],
-        },
+        // {
+        //   title: "Artistic - Printed Handloom - Wool and Tencil - GSM - 3000",
+        //   image: [
+        //     "/Artistic - Printed Handloom - Wool and Tencil - GSM - 3000 (1).jpg",
+        //     "/Artistic - Printed Handloom - Wool and Tencil - GSM - 3000 (2).jpg",
+        //   ],
+        // },
+        // {
+        //   title: "Mystic - Hand Knotted - Wool and Cotton - GSM - 4500",
+        //   image: [
+        //     "/Mystic - Hand Knotted - Wool and Cotton - GSM - 4500 (1).jpg",
+        //     "/Mystic - Hand Knotted - Wool and Cotton - GSM - 4500 (2).jpg",
+        //   ],
+        // },
         {
           title: "Metro - Hand Knotted - Wool and Cotton - GSM - 3000",
           image: [
@@ -72,13 +72,13 @@ export const rugCollection = {
             "/Carnage - Jute Flatweave - Jute - GSM - 2500 (2).jpg",
           ],
         },
-        {
-          title: "Fusion - Hand Knotted - Wool and Cotton - GSM - 3500",
-          image: [
-            "/Fusion - Hand Knotted - Wool and Cotton - GSM - 3500 (1).jpg",
-            "/Fusion - Hand Knotted - Wool and Cotton - GSM - 3500 (2).jpg",
-          ],
-        },
+        // {
+        //   title: "Fusion - Hand Knotted - Wool and Cotton - GSM - 3500",
+        //   image: [
+        //     "/Fusion - Hand Knotted - Wool and Cotton - GSM - 3500 (1).jpg",
+        //     "/Fusion - Hand Knotted - Wool and Cotton - GSM - 3500 (2).jpg",
+        //   ],
+        // },
         {
           title: "Nakoda - Handloom - Wool and Cotton - GSM - 3000",
           image: [
@@ -91,13 +91,13 @@ export const rugCollection = {
     {
       name: "Minimalist Collection",
       products: [
-        {
-          title: "Pearl Rust - Flatweave - Wool and Cotton - GSM - 1800",
-          image: [
-            "/Pearl Rust - Flatweave - Wool and Cotton - GSM - 1800 (1).jpg",
-            "/Pearl Rust - Flatweave - Wool and Cotton - GSM - 1800 (2).jpg",
-          ],
-        },
+        // {
+        //   title: "Pearl Rust - Flatweave - Wool and Cotton - GSM - 1800",
+        //   image: [
+        //     "/Pearl Rust - Flatweave - Wool and Cotton - GSM - 1800 (1).jpg",
+        //     "/Pearl Rust - Flatweave - Wool and Cotton - GSM - 1800 (2).jpg",
+        //   ],
+        // },
         {
           title: "Sudan - Handloom - Wool and Cotton - GSM - 3000",
           image: [
@@ -119,13 +119,13 @@ export const rugCollection = {
             "/Farah - B - Hand Knotted - Wool and Cotton - GSM - 3500 (2).jpg",
           ],
         },
-        {
-          title: "Pearl Sky - Flatweave - Wool and Cotton - GSM - 1800",
-          image: [
-            "/Pearl Sky - Flatweave - Wool and Cotton - GSM - 1800 (1).jpg",
-            "/Pearl Sky - Flatweave - Wool and Cotton - GSM - 1800 (2).jpg",
-          ],
-        },
+        // {
+        //   title: "Pearl Sky - Flatweave - Wool and Cotton - GSM - 1800",
+        //   image: [
+        //     "/Pearl Sky - Flatweave - Wool and Cotton - GSM - 1800 (1).jpg",
+        //     "/Pearl Sky - Flatweave - Wool and Cotton - GSM - 1800 (2).jpg",
+        //   ],
+        // },
         {
           title:
             "CHEVRON VINTAGE GREY - Flatweave - Wool and Cotton - GSM - 1600",
@@ -134,25 +134,25 @@ export const rugCollection = {
             "/CHEVRON VINTAGE GREY - Flatweave - Wool and Cotton - GSM - 1600 (2).jpg",
           ],
         },
-        {
-          title: "Majestic Aqua - Flatweave - Wool and Cotton - GSM - 1600",
-          image: [
-            "/Majestic Aqua -  Flatweave - Wool and Cotton - GSM - 1600 (1).jpg",
-            "/Majestic Aqua -  Flatweave - Wool and Cotton - GSM - 1600 (2).jpg",
-          ],
-        },
+        // {
+        //   title: "Majestic Aqua - Flatweave - Wool and Cotton - GSM - 1600",
+        //   image: [
+        //     "/Majestic Aqua -  Flatweave - Wool and Cotton - GSM - 1600 (1).jpg",
+        //     "/Majestic Aqua -  Flatweave - Wool and Cotton - GSM - 1600 (2).jpg",
+        //   ],
+        // },
       ],
     },
     {
       name: "Sylvan Collection",
       products: [
-        {
-          title: "MADAGASKAR - Zero Pile Tufted - Wool and Cotton - GSM - 2500",
-          image: [
-            "/MADAGASKAR -  Zero Pile Tufted - Wool and Cotton - GSM - 2500 (1).jpg",
-            "/MADAGASKAR -  Zero Pile Tufted - Wool and Cotton - GSM - 2500 (2).jpg",
-          ],
-        },
+        // {
+        //   title: "MADAGASKAR - Zero Pile Tufted - Wool and Cotton - GSM - 2500",
+        //   image: [
+        //     "/MADAGASKAR -  Zero Pile Tufted - Wool and Cotton - GSM - 2500 (1).jpg",
+        //     "/MADAGASKAR -  Zero Pile Tufted - Wool and Cotton - GSM - 2500 (2).jpg",
+        //   ],
+        // },
         {
           title: "Jute Garden - Jute Flatweave - Jute and Cotton - GSM - 1400",
           image: [
@@ -160,14 +160,14 @@ export const rugCollection = {
             "/Jute Garden - Jute Flatweave - Jute and Cotton - GSM - 1400 (1).jpg",
           ],
         },
-        {
-          title:
-            "Karabag Black - Flatweave - Kilim - Wool and Cotton - GSM - 1400",
-          image: [
-            "/Karabag Black -  Flatweave - Kilim - Wool and Cotton - GSM - 1400 (2).jpg",
-            "/Karabag Black -  Flatweave - Kilim - Wool and Cotton - GSM - 1400 (1).jpg",
-          ],
-        },
+        // {
+        //   title:
+        //     "Karabag Black - Flatweave - Kilim - Wool and Cotton - GSM - 1400",
+        //   image: [
+        //     "/Karabag Black -  Flatweave - Kilim - Wool and Cotton - GSM - 1400 (2).jpg",
+        //     "/Karabag Black -  Flatweave - Kilim - Wool and Cotton - GSM - 1400 (1).jpg",
+        //   ],
+        // },
         {
           title:
             "Karabag White - Flatweave - Kilim - Wool and Cotton - GSM - 1400",
@@ -252,13 +252,13 @@ export const rugCollection = {
             "/Solar - Hand Tufted - Viscose and Cotton (2) - GSM - 4500.jpg",
           ],
         },
-        {
-          title: "KRAVET - Zero Pile Tufted - Wool and Cotton - GSM - 2500",
-          image: [
-            "/KRAVET -  Zero Pile Tufted - Wool and Cotton (2) - GSM - 2500.jpg",
-            "/KRAVET -  Zero Pile Tufted - Wool and Cotton (3) - GSM - 2500.jpg",
-          ],
-        },
+        // {
+        //   title: "KRAVET - Zero Pile Tufted - Wool and Cotton - GSM - 2500",
+        //   image: [
+        //     "/KRAVET -  Zero Pile Tufted - Wool and Cotton (2) - GSM - 2500.jpg",
+        //     "/KRAVET -  Zero Pile Tufted - Wool and Cotton (3) - GSM - 2500.jpg",
+        //   ],
+        // },
       ],
     },
     {
@@ -271,32 +271,32 @@ export const rugCollection = {
             "/IKAT - A - Flatweave - Wool and Cotton (2) - GSM - 1200.jpg",
           ],
         },
-        {
-          title: "IKAT - B - Flatweave - Wool and Cotton - GSM - 1200",
-          image: [
-            "/IKAT - B -  Flatweave - Wool and Cotton (1) - GSM - 1200.jpg",
-            "/IKAT - B -  Flatweave - Wool and Cotton (2) - GSM - 1200.jpg",
-          ],
-        },
-        {
-          title: "IKAT - C - Flatweave - Wool and Cotton - GSM - 1200",
-          image: [
-            "/IKAT - C -  Flatweave - Wool and Cotton (1)  - GSM - 1200.jpg",
-            "/IKAT - C -  Flatweave - Wool and Cotton (2)  - GSM - 1200.jpg",
-          ],
-        },
+        // {
+        //   title: "IKAT - B - Flatweave - Wool and Cotton - GSM - 1200",
+        //   image: [
+        //     "/IKAT - B -  Flatweave - Wool and Cotton (1) - GSM - 1200.jpg",
+        //     "/IKAT - B -  Flatweave - Wool and Cotton (2) - GSM - 1200.jpg",
+        //   ],
+        // },
+        // {
+        //   title: "IKAT - C - Flatweave - Wool and Cotton - GSM - 1200",
+        //   image: [
+        //     "/IKAT - C -  Flatweave - Wool and Cotton (1)  - GSM - 1200.jpg",
+        //     "/IKAT - C -  Flatweave - Wool and Cotton (2)  - GSM - 1200.jpg",
+        //   ],
+        // },
       ],
     },
     {
       name: "Eternal Collection",
       products: [
-        {
-          title: "HK - Hand Knotted - Wool and Cotton - GSM - 3500",
-          image: [
-            "/HK - Hand Knotted - Wool and Cotton - GSM - 3500 (1).jpg",
-            "/HK - Hand Knotted - Wool and Cotton - GSM - 3500 (2).jpg",
-          ],
-        },
+        // {
+        //   title: "HK - Hand Knotted - Wool and Cotton - GSM - 3500",
+        //   image: [
+        //     "/HK - Hand Knotted - Wool and Cotton - GSM - 3500 (1).jpg",
+        //     "/HK - Hand Knotted - Wool and Cotton - GSM - 3500 (2).jpg",
+        //   ],
+        // },
         {
           title: "Oriental - Zero Pile Tufted - Wool and Cotton - GSM - 2500",
           image: [
