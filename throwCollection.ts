@@ -51,4 +51,22 @@ export const throwCollection = [
       },
     ],
   },
+  {
+    name: "Rais Collection",
+    products: [
+      {
+        title: "RAIS - 100 - Cotton ",
+        image: ["/RAIS - 100 - (2).jpg", "/RAIS - 100 - (1).jpg"],
+      },
+    ],
+  },
+  {
+    name: "Steve Collection",
+    products: [
+      {
+        title: "STEVE - 70 - Polyester ",
+        image: ["/STEVE - 70 - (1).jpg", "/STEVE - 70 - (2).jpg"],
+      },
+    ],
+  },
 ];
