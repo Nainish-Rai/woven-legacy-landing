@@ -82,8 +82,8 @@ export const rugCollection = {
         {
           title: "Nakoda - Handloom - Wool and Cotton - GSM - 3000",
           image: [
-            "/Nakoda - Handloom - Wool and Cotton - GSM - 3000 (1).jpg",
             "/Nakoda - Handloom - Wool and Cotton - GSM - 3000 (2).jpg",
+            "/Nakoda - Handloom - Wool and Cotton - GSM - 3000 (1).jpg",
           ],
         },
       ],
@@ -130,8 +130,8 @@ export const rugCollection = {
           title:
             "CHEVRON VINTAGE GREY - Flatweave - Wool and Cotton - GSM - 1600",
           image: [
-            "/CHEVRON VINTAGE GREY - Flatweave - Wool and Cotton - GSM - 1600 (1).jpg",
             "/CHEVRON VINTAGE GREY - Flatweave - Wool and Cotton - GSM - 1600 (2).jpg",
+            "/CHEVRON VINTAGE GREY - Flatweave - Wool and Cotton - GSM - 1600 (1).jpg",
           ],
         },
         // {
@@ -172,8 +172,8 @@ export const rugCollection = {
           title:
             "Karabag White - Flatweave - Kilim - Wool and Cotton - GSM - 1400",
           image: [
-            "/Karabag White - Flatweave - Kilim - Wool and Cotton - GSM - 1400.jpg",
             "/Karabag White - Flatweave - Kilim - Wool and Cotton (2).jpg",
+            "/Karabag White - Flatweave - Kilim - Wool and Cotton - GSM - 1400.jpg",
           ],
         },
       ],
@@ -207,8 +207,8 @@ export const rugCollection = {
           title:
             "BUTTERFLY WHITE - Hand Tufted - Viscose and Cotton - GSM - 4500",
           image: [
-            "/BUTTERFLY - White -  Hand Tufted - Viscose and Cotton - GSM - 4500 (2).jpg",
             "/BUTTERFLY - White -  Hand Tufted - Viscose and Cotton - GSM - 4500 (1).jpg",
+            "/BUTTERFLY - White -  Hand Tufted - Viscose and Cotton - GSM - 4500 (2).jpg",
           ],
         },
         {
@@ -234,15 +234,15 @@ export const rugCollection = {
         {
           title: "Illusion - Zero Pile Tufted - Wool and Cotton - GSM - 2500",
           image: [
-            "/Illusion - Zero Pile Tufted - Wool and Cotton (3) - GSM - 2500.jpg",
             "/Illusion - Zero Pile Tufted - Wool and Cotton (2) - GSM - 2500.jpg",
+            "/Illusion - Zero Pile Tufted - Wool and Cotton (3) - GSM - 2500.jpg",
           ],
         },
         {
           title: "Phantom - Hand Tufted - Wool and Cotton - GSM - 3000",
           image: [
-            "/Phantom (2) - Hand Tufted - Wool and Cotton - GSM - 3000.jpg",
             "/Phantom (3) - Hand Tufted - Wool and Cotton - GSM - 3000.jpg",
+            "/Phantom (2) - Hand Tufted - Wool and Cotton - GSM - 3000.jpg",
           ],
         },
         {
@@ -300,8 +300,8 @@ export const rugCollection = {
         {
           title: "Oriental - Zero Pile Tufted - Wool and Cotton - GSM - 2500",
           image: [
-            "/Oriental - Zero Pile Tufted - Wool and Cotton - GSM - 2500 (1).jpg",
             "/Oriental - Zero Pile Tufted - Wool and Cotton - GSM - 2500 (2).jpg",
+            "/Oriental - Zero Pile Tufted - Wool and Cotton - GSM - 2500 (1).jpg",
           ],
         },
         {
