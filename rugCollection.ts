@@ -66,7 +66,8 @@ export const rugCollection = {
           ],
         },
         {
-          title: "Carnage - Jute Flatweave - Jute - GSM - 2500",
+          title:
+            "- - Carnage  - -  Jute Flatweave - - Jute -  -  - GSM - - 2500",
           image: [
             "/Carnage - Jute Flatweave - Jute - GSM - 2500 (1).jpg",
             "/Carnage - Jute Flatweave - Jute - GSM - 2500 (2).jpg",
@@ -115,8 +116,8 @@ export const rugCollection = {
         {
           title: "Farah - B - Hand Knotted - Wool and Cotton - GSM - 3500",
           image: [
-            "/Farah - B - Hand Knotted - Wool and Cotton - GSM - 3500 (1).jpg",
             "/Farah - B - Hand Knotted - Wool and Cotton - GSM - 3500 (2).jpg",
+            "/Farah - B - Hand Knotted - Wool and Cotton - GSM - 3500 (1).jpg",
           ],
         },
         // {

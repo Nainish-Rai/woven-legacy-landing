@@ -29,7 +29,7 @@ function RugCollection() {
         </motion.p>
         {rugCollection.collections.map((collection) => (
           <div key={collection.name} className="mt-8 lg:mt-16">
-            <h1 className="text-3xl font-bold mb-4  alternate-font pl-8">
+            <h1 className="text-3xl font-bold mb-4 text-center lg:text-left  alternate-font pl-8">
               {collection.name}
             </h1>
             <div className="flex flex-wrap w-full">

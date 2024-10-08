@@ -36,6 +36,7 @@ function Throw() {
                   key={product.title}
                   title={product.title}
                   images={product.image}
+                  type="throw"
                 />
               ))}
             </div>

@@ -18,16 +18,17 @@ import { Dot } from "lucide-react";
 type Props = {
   title: string;
   images: string[];
+  type?: string;
 };
 
-function ProductCard({ title, images }: Props) {
+function ProductCard({ title, images, type }: Props) {
   return (
     <motion.div
       initial="hidden"
       whileInView="show"
       variants={textVariant(0.1)}
       viewport={{ once: true }}
-      className="w-full lg:w-1/3 py-1 lg:p-4 lg:py-8 lg:px-1 "
+      className="w-full lg:w-1/3  aspect-video py-1 lg:p-4 lg:py-8 lg:px-1 "
     >
       <div className="w-full bg-white shadow-sm h-fit py-2 lg:p-2 lg:py-4 rounded   ">
         <div className=" flex flex-col flex-wrap items-center lg:flex-col    max-w-full w-full">
@@ -48,18 +49,20 @@ function ProductCard({ title, images }: Props) {
             height={500}
             className="w-full  p-1 h-full  rounded-xl"
           /> */}
-          <Carousel className="w-full h-fit  max-w-[85%] ">
+          <Carousel className="w-full  ">
             <CarouselContent className="p-0">
               {images.map((image, index) => (
                 <CarouselItem key={index}>
-                  <Card className="p-0 border-none">
+                  <Card className="p-2 border-none">
                     <CardContent className="p-0 border-none sm:border-none outline-none">
                       <Image
                         src={image}
                         alt={title}
                         width={500}
                         height={500}
-                        className="w-full   h-full max-h-[500px] min-h-[350px]  rounded-xl"
+                        className={`w-full   h-full max-h-[500px] ${
+                          type === "throw" ? "min-h-[350px]" : "aspect-video"
+                        }  object-center  rounded-xl`}
                       />
                     </CardContent>
                   </Card>
