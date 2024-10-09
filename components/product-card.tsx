@@ -61,7 +61,7 @@ function ProductCard({ title, images, type }: Props) {
                         width={500}
                         height={500}
                         className={`w-full   h-full max-h-[500px] ${
-                          type === "throw" ? "min-h-[350px]" : "aspect-video"
+                          type === "throw" ? "min-h-[350px]" : "aspect-[8/5]"
                         }  object-center  rounded-xl`}
                       />
                     </CardContent>

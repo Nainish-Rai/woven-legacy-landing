@@ -52,7 +52,7 @@ export const AboutFamily = () => {
           src="/family.jpg"
           alt="example image"
           width={900}
-          className="w-full lg:h-auto "
+          className="w-full lg:h-auto brightness-150 "
           height={1080}
         />
       </div>
