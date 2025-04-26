@@ -61,13 +61,20 @@ const Nav = ({ className, children, id }: NavProps) => {
     >
       <div
         id="nav-container"
-        className="max-w-screen-2xl mx-auto py-4 px-6 sm:px-8 flex justify-between items-center"
+        className="max-w-screen-2xl mx-auto py-2 px-6 sm:px-8 flex justify-between items-center"
       >
         <Link
           className="hover:opacity-75 transition-all flex gap-2 items-center"
           href="/"
         >
-          <h2 className="alternate-font text-xl font-bold">Woven Legacy</h2>
+          {/* <h2 className="alternate-font text-xl font-bold">Woven Legacy</h2> */}
+          <Image
+            src="/woven.png"
+            alt="logo"
+            width={120}
+            height={120}
+            className="max-sm:w-20"
+          />
         </Link>
         {children}
         <div className="flex items-center -ml-4 gap-2">
